@@ -21,7 +21,8 @@ function MyForm() {
     
       <View style={styles.container}>
         <View>
-          <Image source={logo}/>
+          <Image source={logo} style = {styles.image}/>
+
         </View>
         <Controller
         control={control}
@@ -79,12 +80,20 @@ function MyForm() {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    alignItems: "center",
+  },
+  image:{
+    width: 150,
+    height: 150,
+    marginBottom: 20,
+    marginTop: 40,
   },
   input: {
     borderWidth: 1,
     borderColor: "gray",
     padding: 10,
     marginBottom: 10,
+    width: "80%"
   },
   errorText: {
     color: "red",
@@ -107,7 +116,14 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 4,
-    elevation: 3,
+    elevation: 5,
+    width: "50%",
+    marginTop: 25,
+    shadowColor: "#000",
+    shadowOffset: {width:5, height: 5},
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+
 
   }
 
